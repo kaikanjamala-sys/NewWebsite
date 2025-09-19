@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BSA Troop 641 — Uniforms</title>
+    <style>
+        :root{
+            --max-width: 900px; /**Keep 900?*/
+            --accent: #003366;
+            --muted: #666;
+            --card-bg: #fff;
+        }
+        html,body{height:100%;margin:0;font-family:Arial,Helvetica,sans-serif;background:#f7f8fb;color:#111}
+        a{color:inherit}
+        .wrap{max-width:var(--max-width);margin:20px auto;padding:0 16px;box-sizing:border-box}
+
+        .header{
+            height:120px;
+            background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUskulzOLrXUiPG3QMJ2gyITklfF39Iu7jpA&s');
+            background-size:contain;
+            background-position:center;
+            background-repeat:no-repeat;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            position:relative;
+        }
+        .header::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.28)}
+        .header .logo{position:relative;z-index:2;color:#fff;font-weight:700;font-size:28px;text-shadow:0 3px 10px rgba(0,0,0,.6);margin:0}
+
+        .topbar{
+            position:sticky;
+            top:0;
+            background:var(--accent);
+            color:#fff;
+            z-index:999;
+            box-shadow:0 2px 4px rgba(0,0,0,.12);
+            height:64px;
+            display:flex;
+            align-items:center;
+        }
+        .topbar nav{
+            display:flex;
+            width:100%;
+            max-width:none;
+            margin:0 auto;
+            padding:0px 16px;
+            box-sizing:border-box;
+            gap:8px;
+            display: flex;
+            width: 100%;
+            max-width: none;
+            margin: 0;
+            padding: 0 16px;
+            box-sizing: border-box;
+            gap: 8px;
+            height: 100%;  
+        }
+        .topbar nav a{
+            flex:1;
+            font-size:20px;
+            text-align:center;
+            padding:0px 12px;
+            height:100%;
+            border-radius:6px;
+            text-decoration:none;
+            color:#fff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition:background .15s,transform .12s,box-shadow .15s;
+        }
+        .topbar nav a:hover,.topbar nav a:focus{background:rgba(255,255,255,0.06);transform:translateY(-3px);box-shadow:0 6px 14px rgba(0,0,0,.12)}
+        .topbar nav a:active{transform:translateY(-1px) scale(.995)}
+
+        h1{font-family:"Comic Sans MS",cursive,Arial;text-align:left;margin:18px 0}
+        .toc{font-weight:700;margin:8px 0}
+        .toc a{margin:0 6px;text-decoration:none;color:var(--accent)}
+
+        .guide{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+            gap:16px;
+            margin-top:12px;
+        }
+        .card{
+            background:var(--card-bg);padding:14px;border-radius:10px;box-shadow:0 8px 22px rgba(12,20,30,0.06);
+            display:flex;flex-direction:column;gap:8px;
+        }
+        .card h3{margin:0;font-size:18px;color:var(--accent)}
+        .card p{margin:0;color:#333;font-size:14px}
+
+        .guide img{max-width:220px;width:100%;height:auto;border-radius:6px;display:block;margin-top:6px}
+
+        section[id]{scroll-margin-top:88px}
+
+        .footer{text-align:center;color:var(--muted);padding:18px 0;margin-top:20px;font-size:13px}
+    </style>
+</head>
+<body>
+
+    <header class="header" role="banner">
+        <h1 class="logo">BSA Troop 641</h1>
+    </header>
+
+    <div class="topbar" role="navigation" aria-label="Main">
+        <nav>
+            <a href="C:\Users\1074568\OneDrive - Lake Washington School District\HTML\Main.html">Home</a>
+            <a href="C:\Users\1074568\OneDrive - Lake Washington School District\HTML\Join.html">Join</a>
+            <a href="C:\Users\1074568\OneDrive - Lake Washington School District\HTML\Uniform.html">Uniforms</a>
+            <a href="C:\Users\1074568\OneDrive - Lake Washington School District\HTML\Gear.html">Gear</a>
+            <a href="C:\Users\1074568\OneDrive - Lake Washington School District\HTML\Calendar.html">Calendar</a>
+        </nav>
+    </div>
+
+    <main class="wrap" role="main">
+        <h1>Uniforms</h1>
+
+        <p class="toc">
+            <a href="#UniformGuide">Uniform Guide</a> |
+            <a href="#ClassB">Class B</a> |
+            <a href="#PatchPlacement">Patch Placement</a>
+        </p>
+
+        <p><strong>Don't let the uniform intimidate you — just come to a meeting and we'll get you sorted out.</strong></p>
+
+        <section id="UniformGuide" aria-labelledby="ug-title">
+            <h2 id="ug-title">Uniform Guide</h2>
+            <p>A typical Scouts BSA uniform includes these essentials:</p>
+
+            <div class="guide">
+                <article class="card">
+                    <h3>Official Tan BSA Shirt</h3>
+                    <p>Official BSA class A uniform, required for all event.</p>
+                    <a href="https://www.scoutshop.org/scouts-bsa-boys-uniform-short-sleeve-shirt-khaki-xs-xl.html">
+                        <img src="https://retailobjects.scoutshop.org/media/catalog/product/cache/6146171d1b2720fb4258aa21dfaa2bd4/6/5/653832_bsa_uniform_short_sleeve_men_khaki_front_8.jpg" alt="Tan BSA Shirt">
+                    </a>
+                </article>
+
+                <article class="card">
+                    <h3>Green Pants</h3>
+                    <p>Any green pants are acceptable</p>
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT-bQPztj388mSgTCO6Pgj6qZjiAFIV-kMuScpyRngMrgJceMxRIbEc7eQVfIyjI59BS85ghHhs4VKyLjjjHdmv1zXtGG8-NRYN1Kw-FVtrf6WTAdvQsRSLJyTespBZy6AbKKnfnEAXxMY&usqp=CAc" alt="Green Pants">
+                </article>
+
+                <article class="card">
+                    <h3>Belt & Neckerchief</h3>
+                    <p>Official BSA belt, ussually only worn for ceremonies/special occasions</p>
+                    <img src="https://retailobjects.scoutshop.org/media/catalog/product/cache/6146171d1b2720fb4258aa21dfaa2bd4/6/4/64060_main.jpg" alt="BSA Belt">                
+                </article>
+
+                <article class="card">
+                    <h3>Neckerchief</h3>
+                    <p>Official BSA neckerchief of our troop, also only worn for special occasion/ceremonies</p>
+                    <img src="https://retailobjects.scoutshop.org/media/catalog/product/cache/6146171d1b2720fb4258aa21dfaa2bd4/6/4/64068_neck-dk-green_f.jpg" alt="BSA Neckerchief">
+                </article>
+
+                <article class="card">
+                    <h3>Meritbadge Sash</h3>
+                    <p>Only needed if you have meritbadges, and wish to display them during a formal event</p>
+                    <img src="" alt="BSA Meritbadge Sash">
+                </article>
+            </div>
+        </section>
+
+        <section id="ClassB">
+            <h2>Class B</h2>
+            <p>During warmer months Scouts may wear official Class B shirts (camp shirts / troop shirts).</p>
+        </section>
+
+        <section id="PatchPlacement">
+            <h2>Patch Placement</h2>
+            <p>Reference guide for where to place rank, patrol and council patches.</p>
+            <img src="https://www.classb.com/wordpress/wp-content/uploads/2020/04/BSA-patch-placement-guide-01.jpg" alt="Patch placement diagram" style="max-width:100%;height:auto;margin-top:10px">
+        </section>
+
+        <div class="footer">
+            <p>&copy; 2025 BSA Troop 641</p>
+        </div>
+    </main>
+
+</body>
+</html>

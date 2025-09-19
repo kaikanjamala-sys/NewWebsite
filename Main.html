@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BSA Troop 641</title>
+    <style>
+
+        body { font-family: Arial, sans-serif; margin: 0; padding-top: 0px;}
+        .header {
+            height: 120px;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUskulzOLrXUiPG3QMJ2gyITklfF39Iu7jpA&s');
+            /**background-size: cover;*/
+            /**background-size: contain;*/
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.28);
+            pointer-events: none;
+        }
+        .header .logo {
+            position: relative; 
+            z-index: 2;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            font-size: 35px;
+            margin: 0;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+        }
+        .header-image { display: none; }
+        .topbar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background: #003366;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            z-index: 9999;
+        }
+        .footer {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+        }
+        .header .logo { font-weight: 700; text-align: center; font-size: 35px; margin-bottom: 15px; }
+        .header .header-image { text-align: center; }
+        .topbar nav {
+            display: flex;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+        }
+        .topbar nav a {
+            color: #fff;
+            flex: 1;
+            font-size: 20px;
+            font-weight: 535;
+            text-align: center;
+            text-decoration: none;
+            margin: 0;
+            padding: 0 12px; 
+            height: 100%;       
+            display: flex;        
+            align-items: center;  
+            justify-content: center;
+            border-radius: 6px;
+            transition: background-color 180ms ease, transform 160ms cubic-bezier(.2,.8,.2,1), box-shadow 180ms ease;
+            -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
+        }
+        .topbar nav a:hover,
+        .topbar nav a:focus {
+            background: rgba(255,255,255,0.06);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+            outline: none;
+        }
+        .topbar nav a:active {
+            transform: translateY(-1px) scale(.995);
+        }
+        .topbar nav a:focus-visible {
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.12);
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 12px 0;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            transform: translateY(10px) scale(.99);
+            opacity:0;
+            transition: transform 420ms cubic-bezier(.2,.8,.2,1), opacity 420ms ease;
+        }
+
+        .card.visible {
+            transform: none;
+            opacity: 1;
+        }
+
+        .header-image img { max-width: 100%; height: auto; }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">BSA Troop 641</div>
+        <div class="header-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUskulzOLrXUiPG3QMJ2gyITklfF39Iu7jpA&s" alt="BSA Logo" style="height:100px;">
+        </div>
+    </div>
+
+    <div class="topbar">
+        <nav>
+            <a href="C:\Users\1074568\OneDrive - Lake Washington School District\HTML\Main.html">Home</a>
+            <a href="C:\Users\1074568\OneDrive - Lake Washington School District\HTML\Join.html">Join</a>
+            <a href="C:\Users\1074568\OneDrive - Lake Washington School District\HTML\Uniform.html">Uniforms</a>
+            <a href="C:\Users\1074568\OneDrive - Lake Washington School District\HTML\Gear.html">Gear</a>
+            <a href="C:\Users\1074568\OneDrive - Lake Washington School District\HTML\Calendar.html">Calendar</a>
+        </nav>
+    </div>
+    <h1 style="text-align:center;">About Us:</h1>
+    <div style="max-width:900px; margin:8px auto; padding:12px 16px; box-sizing:border-box;">
+        <div class="card">
+            <h3>Our troop</h3>
+            <p>Troops 641 and 8641, are part of the Lake Shores District in the Chief Seattle Council of the Boy Scouts of America (BSA).<br><br>We are based in Bellevue WA, and we meet every monday from 7:00-8:30 PM at St. Louise parish</p>
+        </div>
+        <div class="card">
+            <h3>Our Mission</h3>
+            <p>Our mission is to: Develop youth to become outstanding citizens through activities that help them grow their practical knowledge, leadership skills, and self-reliance.</p>
+        </div>
+
+        <div class="card">
+            <h3>Our Scouting Family</h3>
+            <p>Our sponsor organization, St. Louise Parish also sponsors Cub Scout Pack 641, which feeds into our troop. We also have a sister troop, Troop 8641, which is a girls troop that meets at the same time and place as us. We do all of our activities together, including camping trips, service projects, and more. We also have a very big Order of the Arrow (OA) presence, with many of our scouts being members of the OA.
+                <br><br><a href ="">Interested in joining our Scouting Family?</a></p>
+        </div>
+
+        <div class="card">
+            <h3>Volunteer Opportunities</h3>
+            <p>Part of our mission is to serve and give back to the community. As said in the scout oath, "A scout is helpful". Therefore, we have multiple volunteer opportunities throught the year, including:</p>
+        </div>
+
+        <div class="card">
+            <h3>Contact & Questions</h3>
+            <p>Email the troop committee for more information about joining or just come to a meeting.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p style="text-align:center; font-size:12px; color:#666; padding-top:10px;">&copy; 2025 BSA Troop 641</p>
+    
+        
+    <script>
+        (function(){
+            const cards = document.querySelectorAll('.card');
+            if (!cards.length) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        // Retriggers animation: entry.target.classList.remove('visible');
+                    }
+                });
+            }, {
+                root: null, 
+                rootMargin: '0px 0px -10% 0px',
+                threshold: 0.12
+            });
+
+            cards.forEach(c => observer.observe(c));
+        })();
+    </script>
+
+</body>
+</html>
