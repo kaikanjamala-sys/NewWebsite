@@ -3,8 +3,7 @@ body { font-family: Arial, sans-serif; margin: 0; padding-top: 0px;}
 .header {
             height: 120px;
             background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUskulzOLrXUiPG3QMJ2gyITklfF39Iu7jpA&s');
-            /**background-size: cover;*/
-            /**background-size: contain;*/
+            background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
             display: flex;
@@ -28,6 +27,7 @@ body { font-family: Arial, sans-serif; margin: 0; padding-top: 0px;}
             font-size: 35px;
             margin: 0;
             text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+            margin-top: 13px;
 }
 .header-image { display: none; }
 .topbar {
@@ -44,13 +44,15 @@ body { font-family: Arial, sans-serif; margin: 0; padding-top: 0px;}
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
             z-index: 9999;
         }
-.footer {
+.footer {   
+            /*background: #003366;*/
+            text-align: center;
+            position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
             height: 40px;
 }
-.header .logo { font-weight: 700; text-align: center; font-size: 35px; margin-bottom: 15px; }
 .header .header-image { text-align: center; }
 .topbar nav {
             display: flex;
