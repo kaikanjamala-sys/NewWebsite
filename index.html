@@ -117,12 +117,15 @@
 </head>
 
 <body>
-    <div class="header">
+
+    <div id="header-placeholder"></div>
+    
+    <!-- <div class="header">
         <div class="logo">BSA Troop 641</div>
         <div class="header-image">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUskulzOLrXUiPG3QMJ2gyITklfF39Iu7jpA&s" alt="BSA Logo" style="height:100px;">
         </div>
-    </div>
+    </div> 
 
     <div class="topbar">
         <nav>
@@ -131,8 +134,8 @@
             <a href="Uniform.html">Uniforms</a>
             <a href="Gear.html">Gear</a>
             <a href="Calendar.html">Calendar</a>
-        </nav>
-    </div>
+        </nav> 
+    </div> -->
 
     <h1 style="text-align:center;">About Us:</h1>
     <div style="max-width:900px; margin:8px auto; padding:12px 16px; box-sizing:border-box;">
@@ -178,7 +181,8 @@
         </div>
     </div>
 
-    <div class="footer">
+    <div id="footer-placeholder"></div>
+    <!-- <div class="footer">
         <nav style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; padding: 16px 0 8px;">
             <a href="Main.html" style="color:#fff; text-decoration:none; font-weight:600;">Home</a>
             <a href="Join.html" style="color:#fff; text-decoration:none; font-weight:600;">Join</a>
@@ -188,9 +192,15 @@
         </nav>
         <p style="text-align:center; font-size:12px; color:#aaa; margin:4px 0;">Copyright &copy; 2020 - 2025 &mdash; All rights reserved</p>
         <p style="text-align:center; font-size:12px; color:#aaa; margin:4px 0;">141 156th Ave SE, Bellevue, WA 98007</p>
-    </div>
+    </div> -->
         
     <script>
+        fetch('header.html').then(r => r.text()).then(h => {
+            document.getElementById('header-placeholder').innerHTML = h;
+        });
+        fetch('footer.html').then(r => r.text()).then(f => {
+            document.getElementById('footer-placeholder').innerHTML = f;
+        });
         (function(){
             const cards = document.querySelectorAll('.card');
             if (!cards.length) return;
