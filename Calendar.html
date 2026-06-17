@@ -7,35 +7,59 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="header">
-        <div class="logo">BSA Troop 641</div>
-        <div class="header-image" aria-hidden="true">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUskulzOLrXUiPG3QMJ2gyITklfF39Iu7jpA&s" alt="" style="height:100px;">
-        </div>
-    </div>
-
-    <div class="topbar">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="Join.html">Join</a>
-            <a href="Uniform.html">Uniforms</a>
-            <a href="Gear.html">Gear</a>
-            <a href="Calendar.html">Calendar</a>
-        </nav>
-    </div>
     
-    <div class="container">
-        <h1>Welcome</h1>
-        <p style="height:2000px"></p>
+     <div id="header-placeholder"></div>
+
+    <h1 style="text-align:center;">Events Calendar</h1>
+    <div style="max-width:900px; margin:8px auto; padding:12px 16px; box-sizing:border-box;">
+ 
+        <div class="card">
+            <h3>Recurring Yearly Major Events</h3>
+            <ul>
+                <li><strong>Winter Camp (January)</strong> — Klondike</li>
+                <li><strong>Spring Camporee</strong> — Scout-skills competition based weekend campout (usually in the Spring)</li>
+                <li><strong>Summer Camp (July or August)</strong> — Varies between different BSA camps in Washington (and occasionally Oregon)</li>
+                <li><strong>Summer High Adventure — Philmont</strong> — Every 2–3 years, older Scouts can participate</li>
+            </ul>
+        </div>
+ 
+        <div class="card">
+            <h3>Courts of Honor</h3>
+            <p>Every quarter, there is a Court of Honor to recognize Scouts that have advanced in rank and/or earned Merit Badges. It's a fun event where the Scouting family comes together for a potluck dinner, an awards ceremony, and skits performed by the Scouts.</p>
+        </div>
+ 
+        <div class="card">
+            <h3>Other Annual Events</h3>
+            <ul>
+                <li><strong>Merit Badge Fairs</strong> — Scouts can participate in fairs hosted by the Lake Shores District and neighboring districts to earn Merit Badges</li>
+                <li><strong>Training and Scout Fairs</strong> — Multiple opportunities throughout the year</li>
+                <li><strong>Fundraising Projects</strong> — Scouts plan and execute fundraising activities to support the Troop</li>
+                <li><strong>Community Service Projects</strong> — Food collection, trash sweeps, and other community activities</li>
+                <li><strong>Shooting sports weekends</strong> — Scouts can try and earn NRA qualifications, merit badges, and experience shooting a variety of guns</li>
+            </ul>
+        </div>
+ 
     </div>
 
     <div id="footer-placeholder"></div>
 
     <script>
+        fetch('header.html').then(r => r.text()).then(h => {
+            document.getElementById('header-placeholder').innerHTML = h;
+        });
         fetch('footer.html').then(r => r.text()).then(f => {
             document.getElementById('footer-placeholder').innerHTML = f;
         });
+        (function(){
+            const cards = document.querySelectorAll('.card');
+            if (!cards.length) return;
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+            cards.forEach(c => observer.observe(c));
+        })();
     </script>
 
 </body>
