@@ -176,11 +176,16 @@
             <p>Patches maybe applied using Badge Magic, or sown on. Reference the scout book for patch placement, or the image below</p>
             <img src="https://www.classb.com/wordpress/wp-content/uploads/2020/04/BSA-patch-placement-guide-01.jpg" alt="Patch placement diagram" style="max-width:100%;height:auto;margin-top:10px">
         </section>
-
-        <div class="footer">
-            <p>&copy; 2025 BSA Troop 641</p>
-        </div>
     </main>
+    <div id="footer-placeholder"></div>
 
+    <script>
+        // fetch('header.html').then(r => r.text()).then(h => {
+        //     document.getElementById('header-placeholder').innerHTML = h;
+        // });
+        fetch('footer.html').then(r => r.text()).then(f => {
+            document.getElementById('footer-placeholder').innerHTML = f;
+        });
+    </script>
 </body>
 </html>
