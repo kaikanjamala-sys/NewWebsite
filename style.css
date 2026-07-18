@@ -93,13 +93,16 @@ h2 { font-size: 1.8rem; }
 }
 .topbar nav a:hover,
 .topbar nav a:focus {
-            background: rgba(255,255,255,0.06);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-            outline: none;
+    background: rgba(255,255,255,0.06);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    outline: none;
+    text-decoration: underline;
 }
 .topbar nav a:active {
-            transform: translateY(-1px) scale(.995);
+    transform: translateY(-1px) scale(.995);
+    text-decoration: underline;
+    background: rgba(255,255,255,0.12);
 }
 .topbar nav a:focus-visible {
             box-shadow: 0 0 0 3px rgba(255,255,255,0.12);
