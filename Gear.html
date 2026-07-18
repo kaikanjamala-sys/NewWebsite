@@ -9,7 +9,8 @@
 <body>
  
     <div id="header-placeholder"></div>
- 
+    <div id="nav-placeholder" style="position:sticky; top:0; z-index:9999;"></div>
+
     <h1 style="text-align:center;">Camping Gear</h1>
     <div style="max-width:900px; margin:8px auto; padding:12px 16px; box-sizing:border-box;">
  
@@ -94,6 +95,9 @@
     <script>
         fetch('header.html').then(r => r.text()).then(h => {
             document.getElementById('header-placeholder').innerHTML = h;
+        });
+        fetch('nav.html').then(r => r.text()).then(n => {
+            document.getElementById('nav-placeholder').innerHTML = n;
         });
         fetch('footer.html').then(r => r.text()).then(f => {
             document.getElementById('footer-placeholder').innerHTML = f;
