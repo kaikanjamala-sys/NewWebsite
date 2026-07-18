@@ -12,8 +12,7 @@ fetch('nav.html').then(r => r.text()).then(n => {
     const links = document.querySelectorAll('.topbar nav a');
     links.forEach(link => {
         if (link.getAttribute('href') === window.location.pathname.split('/').pop()) {
-            link.style.textDecoration = 'underline';
-            link.style.background = 'rgba(255,255,255,0.12)';
+            link.classList.add('active');
         }
     });
 });
